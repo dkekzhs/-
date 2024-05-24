@@ -26,7 +26,7 @@ public class StorkController : MonoBehaviour
             }
 
             headRb.gravityScale = gravityScale;
-            headRb.AddTorque(Random.Range(-tiltForce, tiltForce) * 0.1f);
+            headRb.AddTorque(Random.Range(-100, 100) * 0.1f);
         }
         else
         {
@@ -37,7 +37,7 @@ public class StorkController : MonoBehaviour
     void Update()
     {
         HandleInput();
-        // IncreaseSpeedOverDistance();
+        IncreaseSpeedOverDistance();
     }
 
     void FixedUpdate()
@@ -101,13 +101,4 @@ public class StorkController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {   
-        Debug.Log("Collision detected with: " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            // 게임 오버 로직
-            GameManager.instance.EndGame();
-        }
-    }
 }

@@ -4,7 +4,7 @@ using UnityEngine.UI; // UI 요소를 사용하기 위해 필요
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // 싱글톤 패턴을 사용하여 어디서든 접근 가능하게 함
-    
+    public float speed;
     public Text scoreText; // 스코어를 표시할 텍스트 UI
     private float score; // 현재 스코어
 
@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // 매 초마다 스코어를 1씩 증가
         score += Time.deltaTime;
         UpdateScoreText();
     }
@@ -48,4 +47,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0; // 게임 시간을 멈춤
         // 여기에 게임 오버 시 보여줄 UI나 로직을 추가할 수 있습니다.
     }
+
+    public string getName(){
+        if(!PlayerPrefs.HasKey("nickname")){
+            PlayerPrefs.SetString("name",initName());
+        }
+        return PlayerPrefs.GetString("nickname");
+    }
+
+    string initName(){
+        return "run"+UnityEngine.Random.Range(0, 210000000);
+    }
+
+
 }
