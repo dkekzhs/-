@@ -37,7 +37,7 @@ public class StorkController : MonoBehaviour
     void Update()
     {
         HandleInput();
-        IncreaseSpeedOverDistance();
+        // IncreaseSpeedOverDistance();
     }
 
     void FixedUpdate()
@@ -74,11 +74,11 @@ public class StorkController : MonoBehaviour
     {
         if (transform.position.x >= nextSpeedIncrease)
         {
-            // walkSpeed += 1f;
+            walkSpeed += 1f;
             nextSpeedIncrease += speedIncreaseInterval;
         }
 
-        // transform.Translate(Vector2.right * walkSpeed * Time.deltaTime);
+        transform.Translate(Vector2.right * walkSpeed * Time.deltaTime);
     }
 
     void RotateHead()
