@@ -6,7 +6,7 @@ public class BackgroundScroller : MonoBehaviour
 {
     public float scrollSpeed = 2f;
     public GameObject[] backgrounds, grounds; // 백그라운드 이미지들을 배열로 설정
-    private float backgroundWidth,groundWidth;
+    private float backgroundWidth, groundWidth;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class BackgroundScroller : MonoBehaviour
 
     void Update()
     {
+        scrollSpeed = GameManager.instance.getSpeed();
         // 백그라운드 스크롤
         ScrollObjects(backgrounds, backgroundWidth);
         // 바닥 스크롤

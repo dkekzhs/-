@@ -8,12 +8,12 @@ public class StorkController : MonoBehaviour
     public float walkSpeed = 2f;
     public float tiltForce = 100f;
     private float speedIncreaseInterval = 10f;
-    private float nextSpeedIncrease = 10f;
     private Rigidbody2D headRb;
     public float gravityScale = 1f;
     public float maxTiltAngle = 60f;
 
     private float currentTiltForce = 0f;
+    private int lastScoreCheckpoint = 0;
 
     void Start()
     {
@@ -37,11 +37,11 @@ public class StorkController : MonoBehaviour
     void Update()
     {
         HandleInput();
-        IncreaseSpeedOverDistance();
     }
 
     void FixedUpdate()
     {
+        IncreaseSpeedOverDistance();
         ApplyTilt();
         RotateHead();
     }
@@ -72,13 +72,17 @@ public class StorkController : MonoBehaviour
 
     void IncreaseSpeedOverDistance()
     {
-        if (transform.position.x >= nextSpeedIncrease)
-        {
-            walkSpeed += 1f;
-            nextSpeedIncrease += speedIncreaseInterval;
-        }
+        //이전 값 같으면 리턴
+        int score = GameManager.instance.getScore();
+        if (lastScoreCheckpoint == score) return;
+        lastScoreCheckpoint = score;
 
-        transform.Translate(Vector2.right * walkSpeed * Time.deltaTime);
+        if (score % 10 == 0 && score != 0)
+        {
+            walkSpeed += 2f;
+            tiltForce += 1000f;
+        }
+        GameManager.instance.setSpeed(walkSpeed);
     }
 
     void RotateHead()

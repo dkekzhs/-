@@ -48,15 +48,32 @@ public class GameManager : MonoBehaviour
         // 여기에 게임 오버 시 보여줄 UI나 로직을 추가할 수 있습니다.
     }
 
-    public string getName(){
-        if(!PlayerPrefs.HasKey("nickname")){
-            PlayerPrefs.SetString("name",initName());
+    public string getName()
+    {
+        if (!PlayerPrefs.HasKey("nickname"))
+        {
+            PlayerPrefs.SetString("name", initName());
         }
         return PlayerPrefs.GetString("nickname");
     }
 
-    string initName(){
-        return "run"+UnityEngine.Random.Range(0, 210000000);
+    public string initName()
+    {
+        return "run" + UnityEngine.Random.Range(0, 210000000);
+    }
+
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+    public float getSpeed()
+    {
+        return this.speed;
+    }
+
+    public int getScore()
+    {
+        return (int)this.score;
     }
 
 
