@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\background\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\background\\license.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\storkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\storkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\screen\\fadeinouttransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\screen\\fadeinouttransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\head.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\head.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\screen\\fadeinouttransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\screen\\fadeinouttransition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\storkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\storkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\screen\\screenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +33,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\backgroundscroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\backgroundscroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\background\\License.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\model\\background\\License.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "License.txt",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\background\\License.txt",
               "RelativeDocumentMoniker": "Assets\\model\\background\\License.txt",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "BackgroundScroller.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\BackgroundScroller.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\BackgroundScroller.cs",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "AutoHingeJoint2D.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\AutoHingeJoint2D.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\AutoHingeJoint2D.cs",
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AutoBoneConnector.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\AutoBoneConnector.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\AutoBoneConnector.cs",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ScreenManager.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\screen\\ScreenManager.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\screen\\ScreenManager.cs",
@@ -110,27 +110,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "FadeInOutTransition.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\screen\\FadeInOutTransition.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\screen\\FadeInOutTransition.cs",
               "ToolTip": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\screen\\FadeInOutTransition.cs",
               "RelativeToolTip": "Assets\\model\\script\\screen\\FadeInOutTransition.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T08:28:57.257Z"
+              "WhenOpened": "2024-08-29T08:28:57.257Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Head.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\Head.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\Head.cs",
               "ToolTip": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\Head.cs",
               "RelativeToolTip": "Assets\\model\\script\\Head.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T16:16:18.231Z"
+              "WhenOpened": "2024-08-25T16:16:18.231Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -140,14 +142,14 @@
               "RelativeDocumentMoniker": "Assets\\model\\script\\GameManager.cs",
               "ToolTip": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\GameManager.cs",
               "RelativeToolTip": "Assets\\model\\script\\GameManager.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAADwvyUAAAAaAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAIA8wDkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T16:11:50.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StorkController.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\StorkController.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\StorkController.cs",
