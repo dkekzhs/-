@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StorkController : MonoBehaviour
+public class PenguinController : MonoBehaviour
 {
     public GameObject head;
+    public Animator legAnimator; // 다리 애니메이터 추가
     public float walkSpeed = 2f;
     public float tiltForce = 100f;
     private float speedIncreaseInterval = 10f;
@@ -37,6 +38,7 @@ public class StorkController : MonoBehaviour
     void Update()
     {
         HandleInput();
+        UpdateLegAnimation(); // 다리 애니메이션 업데이트 추가
     }
 
     void FixedUpdate()
@@ -57,6 +59,11 @@ public class StorkController : MonoBehaviour
             else if (Input.GetKey(KeyCode.RightArrow))
             {
                 currentTiltForce = Random.Range(-tiltForce / 2f, -tiltForce);
+            }
+            else
+            {
+                // Apply a low-level random rotation when idle
+                currentTiltForce = Random.Range(-tiltForce * 0.1f, tiltForce * 0.1f);
             }
         }
     }
@@ -79,7 +86,7 @@ public class StorkController : MonoBehaviour
 
         if (score % 10 == 0 && score != 0)
         {
-            walkSpeed += 2f;
+            walkSpeed += 1f;
             tiltForce += 1000f;
         }
         GameManager.instance.setSpeed(walkSpeed);
@@ -105,4 +112,12 @@ public class StorkController : MonoBehaviour
         }
     }
 
+    void UpdateLegAnimation()
+    {
+        if (legAnimator != null)
+        {
+            // 걷기 애니메이션 속도를 업데이트
+            legAnimator.SetFloat("Speed", walkSpeed);
+        }
+    }
 }

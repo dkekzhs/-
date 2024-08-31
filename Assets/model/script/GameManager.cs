@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI; // UI 요소를 사용하기 위해 필요
 
@@ -5,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // 싱글톤 패턴을 사용하여 어디서든 접근 가능하게 함
     public float speed;
-    public Text scoreText; // 스코어를 표시할 텍스트 UI
+    public TextMeshProUGUI scoreText; // 스코어를 표시할 텍스트 UI
     private float score; // 현재 스코어
 
     void Awake()
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
     void UpdateScoreText()
     {
         // 정수형으로 변환하여 텍스트에 표시
-        scoreText.text = "Score: " + (int)score;
+        scoreText.text = "Score : " + (int)score  + " M";
     }
 
     public void EndGame()

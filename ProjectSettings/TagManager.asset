@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - camera
   - 
   - 
   - 
@@ -43,4 +43,31 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    uniqueID: 1267697957
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 988982157
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 760723167
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 678876231
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 1093879673
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 2445702217
+    locked: 0
+  - name: New Layer 7
+    uniqueID: 2751033239
+    locked: 0
+  - name: Player
+    uniqueID: 4183713731
+    locked: 0
+  - name: cramera
+    uniqueID: 864975127
     locked: 0
