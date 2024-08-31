@@ -1,13 +1,16 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 using UnityEngine.UI; // UI 요소를 사용하기 위해 필요
-
+using System.Collections; 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // 싱글톤 패턴을 사용하여 어디서든 접근 가능하게 함
     public float speed;
     public TextMeshProUGUI scoreText; // 스코어를 표시할 텍스트 UI
     private float score; // 현재 스코어
+    public GameObject player; // 캐릭터의 최상위 오브젝트를 참조
+
 
     void Awake()
     {
@@ -43,10 +46,16 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        // 게임 오버 로직 구현
+
+        StartCoroutine(HandleGameOver());
+    }
+
+    private IEnumerator HandleGameOver()
+    {
+        DeadPlayer(); // 플레이어 사망 처리
+        yield return new WaitForSeconds(2f);
         Debug.Log("Game Over");
         Time.timeScale = 0; // 게임 시간을 멈춤
-        // 여기에 게임 오버 시 보여줄 UI나 로직을 추가할 수 있습니다.
     }
 
     public string getName()
@@ -77,5 +86,66 @@ public class GameManager : MonoBehaviour
         return (int)this.score;
     }
 
+    private void DeadPlayer()
+    {
+        // 캐릭터 오브젝트 내의 모든 RigidBody 컴포넌트를 가져옴
+        Transform[] allChildren = player.GetComponentsInChildren<Transform>();
+        // 캐릭터 오브젝트 내의 모든 RigidBody2D 컴포넌트를 가져옴
+        Rigidbody2D[] rigidbodies = player.GetComponentsInChildren<Rigidbody2D>();
+        HingeJoint2D[] hingeJoints = player.GetComponentsInChildren<HingeJoint2D>();
+        // 현재 오브젝트의 모든 자식 뼈를 찾음
 
+        // 모든 게임 오브젝트를 가져옵니다.
+        GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+
+        foreach (Transform bone in allChildren)
+        {
+            if (bone.name.Contains("bone"))
+            {
+                Destroy(bone.Find(bone.name));
+            }
+            else
+            {
+                // SpriteSkin 컴포넌트가 있는 경우 삭제
+                SpriteSkin spriteSkin = bone.GetComponent<SpriteSkin>();
+                if (spriteSkin != null)
+                {
+                    Destroy(spriteSkin);
+                }
+            }
+
+            // Collider2D 추가 (BoxCollider2D를 예로 사용)
+            if (bone.gameObject.GetComponent<Collider2D>() == null)
+            {
+                bone.gameObject.AddComponent<BoxCollider2D>();
+            }
+
+            // Rigidbody2D 추가
+            if (bone.gameObject.GetComponent<Rigidbody2D>() == null)
+            {
+                Rigidbody2D rb = bone.gameObject.AddComponent<Rigidbody2D>();
+                rb.gravityScale = 1; // 중력 설정
+                rb.isKinematic = false; // 물리적 상호작용을 가능하게 함
+            }
+        }
+
+        // 모든 HingeJoint2D를 해체
+        foreach (HingeJoint2D hinge in hingeJoints)
+        {
+            hinge.enabled = false; // 조인트 비활성화
+        }
+
+        // 캐릭터의 Animator 컴포넌트를 가져옴
+        Animator animator = player.GetComponent<Animator>();
+
+        if (animator != null)
+        {
+            // 현재 애니메이션 상태를 유지하도록 애니메이터를 비활성화
+            animator.enabled = false;
+        }
+
+
+
+
+    }
 }
