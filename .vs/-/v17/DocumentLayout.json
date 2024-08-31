@@ -23,10 +23,6 @@
       "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\screen\\screenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\autoboneconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\autoboneconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\autohingejoint2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C67FD2CD-9799-1731-5F0D-6B0370A8A0AE}|Assembly-CSharp.csproj|solutionrelative:assets\\model\\script\\autohingejoint2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,6 +33,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\background\\License.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\model\\background\\License.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\assets\\model\\script\\autoboneconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\model\\script\\autoboneconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +50,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "License.txt",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\background\\License.txt",
               "RelativeDocumentMoniker": "Assets\\model\\background\\License.txt",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "BackgroundScroller.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\BackgroundScroller.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\BackgroundScroller.cs",
@@ -75,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AutoHingeJoint2D.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\AutoHingeJoint2D.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\AutoHingeJoint2D.cs",
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AutoBoneConnector.cs",
               "DocumentMoniker": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\AutoBoneConnector.cs",
               "RelativeDocumentMoniker": "Assets\\model\\script\\AutoBoneConnector.cs",
