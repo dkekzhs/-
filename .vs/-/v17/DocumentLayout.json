@@ -58,7 +58,8 @@
               "RelativeToolTip": "Assets\\model\\background\\License.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-08-30T12:08:05.563Z"
+              "WhenOpened": "2024-08-30T12:08:05.563Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -118,8 +119,7 @@
               "RelativeToolTip": "Assets\\model\\script\\screen\\FadeInOutTransition.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T08:28:57.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-29T08:28:57.257Z"
             },
             {
               "$type": "Document",
@@ -131,8 +131,7 @@
               "RelativeToolTip": "Assets\\model\\script\\Head.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T16:16:18.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T16:16:18.231Z"
             },
             {
               "$type": "Document",
@@ -142,7 +141,7 @@
               "RelativeDocumentMoniker": "Assets\\model\\script\\GameManager.cs",
               "ToolTip": "C:\\Users\\dkekz\\Desktop\\\uBC41\uC0C8\\-\\Assets\\model\\script\\GameManager.cs",
               "RelativeToolTip": "Assets\\model\\script\\GameManager.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAIA8wDkAAAAWAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAApwDkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T16:11:50.794Z",
               "EditorCaption": ""
