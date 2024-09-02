@@ -6,12 +6,12 @@ public class PenguinController : MonoBehaviour
 {
     public GameObject head;
     public Animator legAnimator; // 다리 애니메이터 추가
-    public float walkSpeed = 2f;
-    public float tiltForce = 100f;
-    private float speedIncreaseInterval = 10f;
+    private float walkSpeed = 2f;
+    private float tiltForce = 20000f;
+    private float speedIncreaseInterval = 0.5f;
     private Rigidbody2D headRb;
-    public float gravityScale = 1f;
-    public float maxTiltAngle = 60f;
+    private float gravityScale = 1.3f;
+    private float maxTiltAngle = 360f;
 
     private float currentTiltForce = 0f;
     private int lastScoreCheckpoint = 0;
@@ -84,9 +84,16 @@ public class PenguinController : MonoBehaviour
         if (lastScoreCheckpoint == score) return;
         lastScoreCheckpoint = score;
 
+        if (GameManager.instance.getPlayerDead())
+        {
+            GameManager.instance.setSpeed(0f);
+            return;
+        }
+
+
         if (score % 10 == 0 && score != 0)
         {
-            walkSpeed += 1f;
+            walkSpeed += 2f;
             tiltForce += 1000f;
         }
         GameManager.instance.setSpeed(walkSpeed);
@@ -117,7 +124,7 @@ public class PenguinController : MonoBehaviour
         if (legAnimator != null)
         {
             // 걷기 애니메이션 속도를 업데이트
-            legAnimator.SetFloat("Speed", walkSpeed);
+            legAnimator.SetFloat("Speed", walkSpeed * 0.80f);
         }
     }
 }

@@ -2,15 +2,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 using UnityEngine.UI; // UI 요소를 사용하기 위해 필요
-using System.Collections; 
+using System.Collections;
+using System;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // 싱글톤 패턴을 사용하여 어디서든 접근 가능하게 함
-    public float speed;
+    private float speed;
     public TextMeshProUGUI scoreText; // 스코어를 표시할 텍스트 UI
     private float score; // 현재 스코어
     public GameObject player; // 캐릭터의 최상위 오브젝트를 참조
-
+    private Boolean playerDead;
 
     void Awake()
     {
@@ -18,7 +19,6 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // 씬이 변경되어도 파괴되지 않도록 함
         }
         else
         {
@@ -30,12 +30,15 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         UpdateScoreText(); // 처음 실행 시 스코어 텍스트 업데이트
+
     }
 
     void Update()
     {
+        if(!playerDead)
         score += Time.deltaTime;
         UpdateScoreText();
+
     }
 
     void UpdateScoreText()
@@ -53,7 +56,9 @@ public class GameManager : MonoBehaviour
     private IEnumerator HandleGameOver()
     {
         DeadPlayer(); // 플레이어 사망 처리
+        GamePauseManager.instance.menuBtnDisable();
         yield return new WaitForSeconds(2f);
+        GamePauseManager.instance.DeadPlayer();
         Debug.Log("Game Over");
         Time.timeScale = 0; // 게임 시간을 멈춤
     }
@@ -80,6 +85,16 @@ public class GameManager : MonoBehaviour
     {
         return this.speed;
     }
+
+    public void setPlayerDead(Boolean isDead)
+    {
+        this.playerDead = isDead;
+    }
+    public Boolean getPlayerDead()
+    {
+        return this.playerDead;
+    }
+
 
     public int getScore()
     {

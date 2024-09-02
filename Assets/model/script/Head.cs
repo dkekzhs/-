@@ -20,6 +20,7 @@ public class Head : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            GameManager.instance.setPlayerDead(true);
             GameManager.instance.EndGame();
         }
     }
