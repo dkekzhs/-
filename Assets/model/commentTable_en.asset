@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: commentTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 8a4189758fd2a0b42a8d1fe116167f35, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 7479099392
+    m_Localized: Failed to add your score.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74759929856
+    m_Localized: Failed to retrieve the score.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83232423936
+    m_Localized: Score added successfully.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99455991808
+    m_Localized: Exiting content.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113842454528
+    m_Localized: Welcome!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129084555264
+    m_Localized: Login failed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151465361408
+    m_Localized: Failed to load  leaderboard.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

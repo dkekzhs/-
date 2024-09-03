@@ -4,6 +4,7 @@ using UnityEngine.U2D.Animation;
 using UnityEngine.UI; // UI 요소를 사용하기 위해 필요
 using System.Collections;
 using System;
+using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // 싱글톤 패턴을 사용하여 어디서든 접근 가능하게 함
@@ -58,7 +59,13 @@ public class GameManager : MonoBehaviour
         DeadPlayer(); // 플레이어 사망 처리
         GamePauseManager.instance.menuBtnDisable();
         yield return new WaitForSeconds(2f);
+
         GamePauseManager.instance.DeadPlayer();
+        LeaderBoardManager.instance.SubmitScore((int) score);
+
+
+
+
         Debug.Log("Game Over");
         Time.timeScale = 0; // 게임 시간을 멈춤
     }

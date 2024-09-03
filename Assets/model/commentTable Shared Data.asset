@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: commentTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: commentTable
+  m_TableCollectionNameGuidString: 8a4189758fd2a0b42a8d1fe116167f35
+  m_Entries:
+  - m_Id: 7479099392
+    m_Key: ADD_FAIL_SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74759929856
+    m_Key: GET_FAIL_SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83232423936
+    m_Key: ADD_SUCCESS_SCORE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99455991808
+    m_Key: EXIT_CONTENT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113842454528
+    m_Key: WELCOME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129084555264
+    m_Key: LOGIN_FAIL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151465361408
+    m_Key: LOAD_FAIL_GOOGLE_LEADERBOARD
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3048134390262267928
+  references:
+    version: 2
+    RefIds:
+    - rid: 3048134390262267928
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1725390669251
