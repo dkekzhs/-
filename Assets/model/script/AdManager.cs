@@ -10,9 +10,9 @@ public class AdManager : MonoBehaviour
     {
         // ÇÃ·§Æû¿¡ µû¶ó ±¤°í ´ÜÀ§ ID ¼³Á¤
 #if UNITY_ANDROID
-        _adUnitId = "ca-app-pub-3940256099942544/1033173712";
+        _adUnitId = "ca-app-pub-2900982499007975/3986401600";
 #elif UNITY_IPHONE
-        _adUnitId = "ca-app-pub-3940256099942544/4411468910";
+        _adUnitId = "ca-app-pub-2900982499007975/2477846990";
 #else
         _adUnitId = "unused";
 #endif

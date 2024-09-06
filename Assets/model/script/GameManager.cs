@@ -58,10 +58,12 @@ public class GameManager : MonoBehaviour
     {
         DeadPlayer(); // 플레이어 사망 처리
         GamePauseManager.instance.menuBtnDisable();
+        LeaderBoardManager.instance.SubmitScore((int)score);
+        AudioEffectManager.Instance.AudioClipPlay(0);
+
         yield return new WaitForSeconds(2f);
 
         GamePauseManager.instance.DeadPlayer();
-        LeaderBoardManager.instance.SubmitScore((int) score);
 
 
 
