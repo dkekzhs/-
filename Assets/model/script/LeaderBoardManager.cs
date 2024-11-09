@@ -13,11 +13,11 @@ public class LeaderBoardManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(instance); // 이미 존재하면 중복 생성을 방지
+            Destroy(gameObject); // 이미 존재하면 중복 생성을 방지
         }
     }
     public void Start()

@@ -1,16 +1,27 @@
 using UnityEngine;
 using GoogleMobileAds.Api;
+using UnityEngine.SceneManagement;
 
 public class AdManager : MonoBehaviour
 {
+
     private string _adUnitId;
     private InterstitialAd _interstitialAd;
 
-    void Start()
+    private AdManager instance;
+    private int nextSense;
+
+    //ca-app-pub-2900982499007975/3986401600
+    //test : ca-app-pub-3940256099942544/1033173712
+    private void Start()
     {
-        // 플랫폼에 따라 광고 단위 ID 설정
+        MobileAds.Initialize((InitializationStatus initStatus) =>
+        {
+            //초기화 완료
+        });
+
 #if UNITY_ANDROID
-        _adUnitId = "ca-app-pub-2900982499007975/3986401600";
+        _adUnitId = "ca-app-pub-3940256099942544/1033173712";
 #elif UNITY_IPHONE
         _adUnitId = "ca-app-pub-2900982499007975/2477846990";
 #else
@@ -19,6 +30,8 @@ public class AdManager : MonoBehaviour
 
         LoadInterstitialAd();
     }
+
+
 
     /// <summary>
     /// 전면 광고를 로드합니다.
@@ -67,30 +80,61 @@ public class AdManager : MonoBehaviour
         }
     }
 
-    private void RegisterEventHandlers(InterstitialAd interstitialAd)
+    private void RegisterEventHandlers(InterstitialAd ad)
     {
-        interstitialAd.OnAdFullScreenContentClosed += () =>
+        ad.OnAdPaid += (AdValue adValue) =>
         {
-            Debug.Log("전면 광고 콘텐츠가 닫혔습니다.");
-            LoadInterstitialAd(); // 광고가 닫히면 새로운 광고 로드
-        };
+            //보상 주기
 
-        interstitialAd.OnAdFullScreenContentFailed += (AdError error) =>
+            Debug.Log(string.Format("Interstitial ad paid {0} {1}.",
+                adValue.Value,
+                adValue.CurrencyCode));
+        };
+        ad.OnAdImpressionRecorded += () =>
         {
-            Debug.LogError("전면 광고 콘텐츠 열기 실패: " + error);
-            LoadInterstitialAd(); // 광고 열기 실패 시 새로운 광고 로드
+            Debug.Log("Interstitial ad recorded an impression.");
+        };
+        ad.OnAdClicked += () =>
+        {
+            Debug.Log("Interstitial ad was clicked.");
+        };
+        ad.OnAdFullScreenContentOpened += () =>
+        {
+            Debug.Log("Interstitial ad full screen content opened.");
+        };
+        ad.OnAdFullScreenContentClosed += () =>
+        {
+            Debug.Log("Interstitial ad full screen content closed.");
+            MoveToNextScene(nextSense); // 광고가 닫힌 후 씬 이동
+        };
+        ad.OnAdFullScreenContentFailed += (AdError error) =>
+        {
+            Debug.LogError("Interstitial ad failed to open full screen content " +
+                           "with error : " + error);
         };
     }
 
     // Play 버튼 클릭 시 호출되는 메서드
-    public void OnPlayButtonClicked()
+    public void OnPlayButtonClicked(int nextSense)
     {
-        ShowInterstitialAd();
+        int result = Random.Range(0, 10);
+        this.nextSense = nextSense;
+
+        if (result < 3)
+        {
+            ShowInterstitialAd();
+        }
+        else {
+            ScreenManager sc = gameObject.AddComponent<ScreenManager>();
+            sc.moveScene(nextSense);
+        }
+
     }
 
     // Retry 버튼 클릭 시 호출되는 메서드
-    public void OnRetryButtonClicked()
+    public void OnRetryButtonClicked(int nextSense)
     {
+        this.nextSense = nextSense;
         if (_interstitialAd != null && _interstitialAd.CanShowAd())
         {
             ShowInterstitialAd();
@@ -108,5 +152,9 @@ public class AdManager : MonoBehaviour
         {
             _interstitialAd.Destroy();
         }
+    }
+    private void MoveToNextScene(int nextSen)
+    {
+        SceneManager.LoadScene(nextSen); // 실제 씬 이름으로 변경
     }
 }

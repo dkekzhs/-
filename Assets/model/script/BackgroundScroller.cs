@@ -58,6 +58,6 @@ public class BackgroundScroller : MonoBehaviour
         }
 
         // 오른쪽 끝에 있는 오브젝트의 오른쪽으로 이동
-        obj.transform.position = new Vector3(rightmostX + objectWidth, obj.transform.position.y, obj.transform.position.z);
+        obj.transform.position = new Vector3(rightmostX + objectWidth - 0.3f, obj.transform.position.y, obj.transform.position.z);
     }
 }
