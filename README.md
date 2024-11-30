@@ -1,5 +1,8 @@
 ## 해골 멀리가기 게임 SIMPLE IS BEST
 
+### PlayStore Link
+https://play.google.com/store/apps/details?id=com.dongjae.skeleton&hl=ko
+
 ### 개요
 싸피에서 팀원들과 이야기 하면서 게임을 만들고 싶었습니다.
 하지만 프로젝트가 바빠서 실제로 구현하지는 못했고 제 머릿속에 저장만 되어 있었습니다.
